@@ -44,7 +44,7 @@ The **Concert Booking Backend API** is a robust and scalable backend system buil
 
 Ensure you have the following installed:
 
-- **Java 17+**
+- **Java 23**
 - **Maven**
 - **PostgreSQL**
 - **Redis**
