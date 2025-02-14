@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/concert_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  redis:
+    host: concert_redis
+    port: 6379
+
+  flyway:
+    enabled: false
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+vnpay:
+  tmnCode:
+  secretKey:
+  returnUrl: "http://localhost:8080/api/payment/vnpay-return"
+  url: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
+
+
+JWT_SECRET_KEY: pO9sGkGt+F8nJ1vJlAoYoCBFFLRR+6OaHZZoA9xHJkA=
+
